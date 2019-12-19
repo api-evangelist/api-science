@@ -1,0 +1,874 @@
+{
+    "id": "ad4791fa8470951688442a89012dceeb",
+    "name": "API Science",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "b0cdba9eb8f792f704e54eeca940ceb0",
+            "name": "Get All Contacts",
+            "url": "https\/contacts.json",
+            "description": "Get All Contacts",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "8877d1abae3f7e8564fb50ad6d5816e8",
+            "name": "Create a Contact",
+            "url": "https\/contacts.json",
+            "description": "Create a Contact",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "label",
+                    "description": "User-defined label for this contact.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "type",
+                    "description": "Type of contact, options are: email, url, pagerduty",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "value",
+                    "description": "Contents of value vary based on the type of contact being created: an email address, a URL or your PagerDuty API key.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "a14ecf24175c77ce1ff02d4cd554d462",
+            "name": "Delete a Contact",
+            "url": "https\/contacts\/{id}.json",
+            "description": "Delete a Contact",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "The id for the contact.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "abd13e5ec7fafa8d6eabcc02d2b2742f",
+            "name": "Get a Specific Contact",
+            "url": "https\/contacts\/{id}.json",
+            "description": "Get a Specific Contact",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "The id for the contact.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "9f2fa77a129dfe45b85d7587b72dc73c",
+            "name": "Update a Contact",
+            "url": "https\/contacts\/{id}.json",
+            "description": "Update a Contact",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "The id for the contact.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "label",
+                    "description": "User-defined label for this contact.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "type",
+                    "description": "Type of contact, options are: email, url, pagerduty",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "value",
+                    "description": "Contents of value vary based on the type of contact being created: an email address, a URL or your PagerDuty API key.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "0923e9eb574dde7a8054a9cc17a9c1fa",
+            "name": "Get All Monitors",
+            "url": "https\/monitors",
+            "description": "Marks message as read.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Authorization",
+                    "description": "Your API key must be included in all API requests to the server in an Authorization HTTP header.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tags",
+                    "description": "Optionally filter monitors by tags. Can be chained multiple times to do an inclusive tag search.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "a909792b8ef1edb58d4e30a6907e4bb2",
+            "name": "Create a Monitor",
+            "url": "https\/monitors",
+            "description": "Create a Monitor",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "active",
+                    "description": "This flag determines whether the monitor is either running or paused. When creating a new monitor, if this flag is set to true, the monitor will immediately begin monitoring. By default, this field is set to false",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "frequency",
+                    "description": "The frequency that you want this monitor to be run at. Options are: 60, 300, 600, 900, 1800, 3600 (in seconds).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "name",
+                    "description": "The name of the monitor.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "templates",
+                    "description": "An array of template objects to be created. These objects must be put into an array. If there is any issue creating a template or any of itu2019s nested items, the entire monitor creation will fail.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "a35eb5ec9a8f21da8d9d5779fa0a4009",
+            "name": "Apply Actions to Multiple Monitors",
+            "url": "https\/monitors",
+            "description": "Apply Actions to Multiple Monitors",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tags",
+                    "description": "Optionally filter monitors by tags. Can be chained multiple times to do an inclusive tag search.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "c619118a70e254320ecdd3f5ac761b28",
+            "name": "Get a Specific Monitor",
+            "url": "https\/monitors\/{id}",
+            "description": "Get a Specific Monitor",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "The id for the contact.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "1973d666bee5c3a6e2dbf24227988da2",
+            "name": "Get Checks For A Monitor",
+            "url": "https\/monitors\/{id}\/checks.json",
+            "description": "Get Checks For A Monitor",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "count",
+                    "description": "The number of checks to return.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "The id for the contact.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "start",
+                    "description": "The start number represents which ID is the maximum check that could be found. Its purpose is to root the pagination even as new data keeps on being continually added. Typically this will be generated by the provided pagination URL and not something the user needs to create.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "6cc27e5cddb3cd6315e765178a8ba6d1",
+            "name": "Performance Report",
+            "url": "https\/monitors\/{id}\/performance",
+            "description": "Performance Report",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "end",
+                    "description": "The end point you want to build a performance report from. Format should be in ISO 8601. If the timezone is not provided, the report will assume UTC. Partial dates (ex: YYYY-MM-DD) are supported",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "The id for the contact.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "preset",
+                    "description": "Present for commonly requested reports. Options are lastDay and lastWeek.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "resolution",
+                    "description": "The resolution is the time unit for aggregating data, with allowable values of hour, day, and week.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "start",
+                    "description": "The start number represents which ID is the maximum check that could be found. Its purpose is to root the pagination even as new data keeps on being continually added. Typically this will be generated by the provided pagination URL and not something the user needs to create.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "73e936c318ef00da0ade6960b9508f6f",
+            "name": "Show a Monitors Templates",
+            "url": "https\/monitors\/{id}\/templates",
+            "description": "Show a Monitors Templates",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "The id for the contact.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "c9974fbbc1e784616ad88031ad935ddb",
+            "name": "Get a Template",
+            "url": "https\/monitors\/{id}\/templates\/{templates]",
+            "description": "Get a Template",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "e5ad339d616645bd28bddbeb553cbda8",
+            "name": "Create a Template",
+            "url": "https\/monitors\/{id}\/templates\/{templates]",
+            "description": "Create a Template",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "Raw body to be send with the request.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "followRedirects",
+                    "description": "True if this call should automatically follow HTTP redirects (default is False).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "headers",
+                    "description": "An array of key\/value pairs to send as URL parameters. These will be URL encoded. If you have provided parameters as part of the base URL these will be appended to those existing parameters.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "method",
+                    "description": "The HTTP action to access the given URL. Options are: GET, POST, PUTS, PATCH, DELETE.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "name",
+                    "description": "The name of the monitor.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "preProcessScript",
+                    "description": "JavaScript to be executed prior to running this template. In the context of a multi-step monitor, the results of the previous call are available to this JavaScript context (ex: thus enabling you to extract and use data or variables from previous step prior to running this step).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "url",
+                    "description": "The URL to be accessed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "validations",
+                    "description": "An array of validation objects to be run on the results of this template.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "5abef75f68eeb0ede93a03e1540ef2e7",
+            "name": "Testing your Monitor",
+            "url": "https\/monitors\/{id}\/test",
+            "description": "Testing your Monitor",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "fa280d1bbc1eeb6d78739b0a6f196d89",
+            "name": "Uptime Report",
+            "url": "https\/monitors\/{id}\/uptime.json",
+            "description": "Uptime Report",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "end",
+                    "description": "The end point you want to build a performance report from. Format should be in ISO 8601. If the timezone is not provided, the report will assume UTC. Partial dates (ex: YYYY-MM-DD) are supported",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "The id for the contact.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "preset",
+                    "description": "Present for commonly requested reports. Options are lastDay and lastWeek.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "resolution",
+                    "description": "The resolution is the time unit for aggregating data, with allowable values of hour, day, and week.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "start",
+                    "description": "The start number represents which ID is the maximum check that could be found. Its purpose is to root the pagination even as new data keeps on being continually added. Typically this will be generated by the provided pagination URL and not something the user needs to create.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "4142ab16dabff1cf7dd712cdeb396110",
+            "name": "List All Tags",
+            "url": "https\/tags",
+            "description": "List All Tags",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "detailed",
+                    "description": "Detailed List All Tags",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "fd5c92212a873cd8708c29faac4a462f",
+            "name": "Get Contacts List",
+            "url": "https\n    \/api\/{version}\/contacts",
+            "description": "\n    Returns a list of all contacts.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "\n    GET",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "limit",
+                    "description": "Limits the number of returned contacts to the specified quantity.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Offset for listing. (Requires limit.)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "c9ff89fc7962084c24bc73e6a3b4ccb4",
+            "name": "Deleting a tag",
+            "url": "https\/inventory\/tags",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "token",
+                    "description": "Your API token",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "name",
+                    "description": "Name of the tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "color",
+                    "description": "The color of the tag in hexcode",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "f994e086865249e49ee8eb1e4bb5c96e",
+            "name": "Update Monitor",
+            "url": "https\/monitors\/{monitor_id}",
+            "description": "Update an existing monitor",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "PUT",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "monitor_id",
+                    "description": "MandatoryUnique ID of the monitor. You can find monitor_id using the monitor list api.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "fac4b7fdfc3e027d150c5930912af4d5",
+            "name": "Activate Monitor",
+            "url": "https\/monitors\/activate\/{monitor_id}",
+            "description": "Activate a suspended monitor",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "PUT",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "monitor_id",
+                    "description": "MandatoryUnique ID of the monitor. You can find monitor_id using the monitor list api.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        },
+        {
+            "id": "a5e766f73bc343e67c0b6ecc50ad7507",
+            "name": "Poll Monitor",
+            "url": "https\/monitor\/poll_now\/{monitor_id}",
+            "description": "Poll a monitor.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "monitor_id",
+                    "description": "MandatoryUnique ID of the monitor. You can find monitor_id using the monitor list api.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad4791fa8470951688442a89012dceeb",
+            "rawModeData": ""
+        }
+    ]
+}
