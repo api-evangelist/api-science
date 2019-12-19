@@ -1,0 +1,462 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "API Science",
+        "description": "",
+        "termsOfService": ""
+    },
+    "servers": [
+        "https"
+    ],
+    "paths": {
+        "\/contacts.json": {
+            "get": {
+                "summary": "Get All Contacts",
+                "description": "Get All Contacts",
+                "operationId": "GetAllContacts",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Create a Contact",
+                "description": "Create a Contact",
+                "operationId": "CreateContact",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "label",
+                        "in": "formData",
+                        "description": "User-defined label for this contact."
+                    },
+                    {
+                        "name": "type",
+                        "in": "formData",
+                        "description": "Type of contact, options are: email, url, pagerduty"
+                    },
+                    {
+                        "name": "value",
+                        "in": "formData",
+                        "description": "Contents of value vary based on the type of contact being created: an email address, a URL or your PagerDuty API key."
+                    }
+                ]
+            }
+        },
+        "\/contacts\/{id}.json": {
+            "delete": {
+                "summary": "Delete a Contact",
+                "description": "Delete a Contact",
+                "operationId": "DeleteContact",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id for the contact."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get a Specific Contact",
+                "description": "Get a Specific Contact",
+                "operationId": "GetContact",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id for the contact."
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Update a Contact",
+                "description": "Update a Contact",
+                "operationId": "UpdateContact",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id for the contact."
+                    },
+                    {
+                        "name": "label",
+                        "in": "formData",
+                        "description": "User-defined label for this contact."
+                    },
+                    {
+                        "name": "type",
+                        "in": "formData",
+                        "description": "Type of contact, options are: email, url, pagerduty"
+                    },
+                    {
+                        "name": "value",
+                        "in": "query",
+                        "description": "Contents of value vary based on the type of contact being created: an email address, a URL or your PagerDuty API key."
+                    }
+                ]
+            }
+        },
+        "\/monitors": {
+            "get": {
+                "summary": "Get All Monitors",
+                "description": "Marks message as read.",
+                "operationId": "GetAllMonitors",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Your API key must be included in all API requests to the server in an Authorization HTTP header."
+                    },
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Optionally filter monitors by tags. Can be chained multiple times to do an inclusive tag search."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a Monitor",
+                "description": "Create a Monitor",
+                "operationId": "CreateMonitor",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "active",
+                        "in": "formData",
+                        "description": "This flag determines whether the monitor is either running or paused. When creating a new monitor, if this flag is set to true, the monitor will immediately begin monitoring. By default, this field is set to false"
+                    },
+                    {
+                        "name": "frequency",
+                        "in": "formData",
+                        "description": "The frequency that you want this monitor to be run at. Options are: 60, 300, 600, 900, 1800, 3600 (in seconds)."
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "The name of the monitor."
+                    },
+                    {
+                        "name": "templates",
+                        "in": "formData",
+                        "description": "An array of template objects to be created. These objects must be put into an array. If there is any issue creating a template or any of itu2019s nested items, the entire monitor creation will fail."
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Apply Actions to Multiple Monitors",
+                "description": "Apply Actions to Multiple Monitors",
+                "operationId": "ApplyActionsToMultipleMonitors",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tags",
+                        "in": "path",
+                        "description": "Optionally filter monitors by tags. Can be chained multiple times to do an inclusive tag search."
+                    }
+                ]
+            }
+        },
+        "\/monitors\/{id}": {
+            "get": {
+                "summary": "Get a Specific Monitor",
+                "description": "Get a Specific Monitor",
+                "operationId": "GetMonitor",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id for the contact."
+                    }
+                ]
+            }
+        },
+        "\/monitors\/{id}\/checks.json": {
+            "get": {
+                "summary": "Get Checks For A Monitor",
+                "description": "Get Checks For A Monitor",
+                "operationId": "GetChecksForAMonitor",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "The number of checks to return."
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id for the contact."
+                    },
+                    {
+                        "name": "start",
+                        "in": "query",
+                        "description": "The start number represents which ID is the maximum check that could be found. Its purpose is to root the pagination even as new data keeps on being continually added. Typically this will be generated by the provided pagination URL and not something the user needs to create."
+                    }
+                ]
+            }
+        },
+        "\/monitors\/{id}\/performance": {
+            "get": {
+                "summary": "Performance Report",
+                "description": "Performance Report",
+                "operationId": "PerformanceReport",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "end",
+                        "in": "query",
+                        "description": "The end point you want to build a performance report from. Format should be in ISO 8601. If the timezone is not provided, the report will assume UTC. Partial dates (ex: YYYY-MM-DD) are supported"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id for the contact."
+                    },
+                    {
+                        "name": "preset",
+                        "in": "query",
+                        "description": "Present for commonly requested reports. Options are lastDay and lastWeek."
+                    },
+                    {
+                        "name": "resolution",
+                        "in": "query",
+                        "description": "The resolution is the time unit for aggregating data, with allowable values of hour, day, and week."
+                    },
+                    {
+                        "name": "start",
+                        "in": "query",
+                        "description": "The start number represents which ID is the maximum check that could be found. Its purpose is to root the pagination even as new data keeps on being continually added. Typically this will be generated by the provided pagination URL and not something the user needs to create."
+                    }
+                ]
+            }
+        },
+        "\/monitors\/{id}\/templates": {
+            "get": {
+                "summary": "Show a Monitors Templates",
+                "description": "Show a Monitors Templates",
+                "operationId": "ShowMonitorsTemplates",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id for the contact."
+                    }
+                ]
+            }
+        },
+        "\/monitors\/{id}\/templates\/{templates]": {
+            "get": {
+                "summary": "Get a Template",
+                "description": "Get a Template",
+                "operationId": "GetTemplate",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Create a Template",
+                "description": "Create a Template",
+                "operationId": "CreateTemplate",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "formData",
+                        "description": "Raw body to be send with the request."
+                    },
+                    {
+                        "name": "followRedirects",
+                        "in": "formData",
+                        "description": "True if this call should automatically follow HTTP redirects (default is False)."
+                    },
+                    {
+                        "name": "headers",
+                        "in": "formData",
+                        "description": "An array of key\/value pairs to send as URL parameters. These will be URL encoded. If you have provided parameters as part of the base URL these will be appended to those existing parameters."
+                    },
+                    {
+                        "name": "method",
+                        "in": "formData",
+                        "description": "The HTTP action to access the given URL. Options are: GET, POST, PUTS, PATCH, DELETE."
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "The name of the monitor."
+                    },
+                    {
+                        "name": "preProcessScript",
+                        "in": "formData",
+                        "description": "JavaScript to be executed prior to running this template. In the context of a multi-step monitor, the results of the previous call are available to this JavaScript context (ex: thus enabling you to extract and use data or variables from previous step prior to running this step)."
+                    },
+                    {
+                        "name": "url",
+                        "in": "formData",
+                        "description": "The URL to be accessed."
+                    },
+                    {
+                        "name": "validations",
+                        "in": "formData",
+                        "description": "An array of validation objects to be run on the results of this template."
+                    }
+                ]
+            }
+        },
+        "\/monitors\/{id}\/test": {
+            "get": {
+                "summary": "Testing your Monitor",
+                "description": "Testing your Monitor",
+                "operationId": "TestMonitor",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/monitors\/{id}\/uptime.json": {
+            "get": {
+                "summary": "Uptime Report",
+                "description": "Uptime Report",
+                "operationId": "UptimeReport",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "end",
+                        "in": "query",
+                        "description": "The end point you want to build a performance report from. Format should be in ISO 8601. If the timezone is not provided, the report will assume UTC. Partial dates (ex: YYYY-MM-DD) are supported"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id for the contact."
+                    },
+                    {
+                        "name": "preset",
+                        "in": "query",
+                        "description": "Present for commonly requested reports. Options are lastDay and lastWeek."
+                    },
+                    {
+                        "name": "resolution",
+                        "in": "query",
+                        "description": "The resolution is the time unit for aggregating data, with allowable values of hour, day, and week."
+                    },
+                    {
+                        "name": "start",
+                        "in": "query",
+                        "description": "The start number represents which ID is the maximum check that could be found. Its purpose is to root the pagination even as new data keeps on being continually added. Typically this will be generated by the provided pagination URL and not something the user needs to create."
+                    }
+                ]
+            }
+        },
+        "\/tags": {
+            "get": {
+                "summary": "List All Tags",
+                "description": "List All Tags",
+                "operationId": "ListAllTags",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "detailed",
+                        "in": "query",
+                        "description": "Detailed List All Tags"
+                    }
+                ]
+            }
+        },
+        "\n    \/api\/{version}\/contacts": {
+            "\n    GET": {
+                "summary": "Get Contacts List",
+                "description": "\n    Returns a list of all contacts.",
+                "operationId": "GetContactsList",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Limits the number of returned contacts to the specified quantity."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Offset for listing. (Requires limit.)"
+                    }
+                ]
+            }
+        },
+        "\/inventory\/tags": {
+            "": {
+                "summary": "Deleting a tag",
+                "description": "",
+                "operationId": "DeletingATag",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "body",
+                        "description": "Your API token"
+                    },
+                    {
+                        "name": "name",
+                        "in": "body",
+                        "description": "Name of the tag"
+                    },
+                    {
+                        "name": "color",
+                        "in": "body",
+                        "description": "The color of the tag in hexcode"
+                    }
+                ]
+            }
+        },
+        "\/monitors\/{monitor_id}": {
+            "PUT": {
+                "summary": "Update Monitor",
+                "description": "Update an existing monitor",
+                "operationId": "UpdateMonitor",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "monitor_id",
+                        "in": "path",
+                        "description": "MandatoryUnique ID of the monitor. You can find monitor_id using the monitor list api."
+                    }
+                ]
+            }
+        },
+        "\/monitors\/activate\/{monitor_id}": {
+            "PUT": {
+                "summary": "Activate Monitor",
+                "description": "Activate a suspended monitor",
+                "operationId": "ActivateMonitor",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "monitor_id",
+                        "in": "path",
+                        "description": "MandatoryUnique ID of the monitor. You can find monitor_id using the monitor list api."
+                    }
+                ]
+            }
+        },
+        "\/monitor\/poll_now\/{monitor_id}": {
+            "GET": {
+                "summary": "Poll Monitor",
+                "description": "Poll a monitor.",
+                "operationId": "PollMonitor",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "monitor_id",
+                        "in": "path",
+                        "description": "MandatoryUnique ID of the monitor. You can find monitor_id using the monitor list api."
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
