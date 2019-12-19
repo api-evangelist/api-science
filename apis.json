@@ -1,0 +1,97 @@
+{
+    "name": "API Science",
+    "description": "<p>Traditional monitoring services were designed long before APIs became core to modern applications. API Science is designed specifically for monitoring APIs. Sure, we understand REST, JSON, OAuth, XML. No problem.<\/p>",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/api-science-logo.png",
+    "tags": [
+        "api lifeycle",
+        "api service provider",
+        "have api",
+        "monitoring",
+        "relative data"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/api-science\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Monitor API",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/api-science-logo.png",
+            "humanURL": "http:\/\/apiscience.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/monitor-api.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/monitor-api-openapi.json"
+                }
+            ]
+        },
+        {
+            "name": "API Science",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/api-science-logo.png",
+            "humanURL": "http:\/\/apiscience.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-science-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-science.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Base URL",
+            "url": "http:\/\/api.apiscience.com"
+        },
+        {
+            "type": "Blog",
+            "url": "https:\/\/www.apiscience.com\/blog\/"
+        },
+        {
+            "type": "Blog RSS",
+            "url": "https:\/\/www.apiscience.com\/blog\/feed\/"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/www.apiscience.com\/docs\/api"
+        },
+        {
+            "type": "Pricing",
+            "url": "https:\/\/www.apiscience.com\/pricing"
+        },
+        {
+            "type": "Privacy",
+            "url": "https:\/\/www.apiscience.com\/privacy"
+        },
+        {
+            "type": "Terms Of Service",
+            "url": "https:\/\/www.apiscience.com\/terms"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/APIScience"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/apiscience.com"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/www.apiscience.com\/"
+        }
+    ]
+}
