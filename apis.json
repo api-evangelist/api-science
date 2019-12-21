@@ -9,8 +9,8 @@
         "monitoring",
         "relative data"
     ],
-    "created": "2019-12-19",
-    "modified": "2019-12-19",
+    "created": "2019-12-20",
+    "modified": "2019-12-20",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/api-science\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -24,11 +24,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/monitor-api.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/api-science\/master\/monitor-api-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/monitor-api-openapi.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/monitor-api.json"
                 }
             ]
         },
@@ -42,7 +42,7 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-science-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/api-science\/master\/api-science-openapi.json"
                 },
                 {
                     "type": "x-openapi",
@@ -53,6 +53,10 @@
     ],
     "include": [],
     "x-common": [
+        {
+            "type": "APIs.json",
+            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
+        },
         {
             "type": "Base URL",
             "url": "http:\/\/api.apiscience.com"
