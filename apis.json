@@ -9,29 +9,11 @@
         "monitoring",
         "relative data"
     ],
-    "created": "2019-12-20",
-    "modified": "2019-12-20",
+    "created": "2019-12-25",
+    "modified": "2019-12-25",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/api-science\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
-        {
-            "name": "Monitor API",
-            "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/api-science-logo.png",
-            "humanURL": "http:\/\/apiscience.com",
-            "baseURL": "",
-            "tags": [],
-            "properties": [
-                {
-                    "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/api-science\/master\/monitor-api-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/monitor-api.json"
-                }
-            ]
-        },
         {
             "name": "API Science",
             "description": null,
@@ -47,6 +29,14 @@
                 {
                     "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-science.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/api-science\/master\/api-science-postman-collection.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/api-science\/master\/api-science-postman-collection.json"
                 }
             ]
         }
